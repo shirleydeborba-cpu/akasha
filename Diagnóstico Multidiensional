@@ -1,0 +1,164 @@
+Perfeito. Aqui está o **mesmo prompt**, já com o seu WhatsApp configurado (**5581986831679**) e com a mensagem pronta bem “Leide”, acolhedora e premium. É só **copiar e colar no Codex** (modo **Code / Gerar código**).
+
+```text
+Crie um mini-app web 100% estático (sem frameworks) chamado “Diagnóstico Multidimensional da Alma”.
+Entregue em 3 arquivos: index.html, style.css, app.js.
+
+OBJETIVO
+- O app deve exibir um formulário com 6 perguntas de múltipla escolha.
+- Cada alternativa soma pontos em 4 áreas: PROSPERIDADE (P), RELACIONAMENTOS (R), ESPIRITUAL (E), ENERGIA VITAL (V).
+- Ao final, o app calcula:
+  1) qual área teve maior pontuação (resultado predominante)
+  2) chakra associado ao resultado (mapa abaixo)
+  3) nível do bloqueio (leve/moderado/profundo) baseado no total de pontos do resultado predominante
+- Mostrar uma tela de resultado com:
+  - Título “Seu Diagnóstico Energético”
+  - “Área predominante”
+  - “Chakra associado”
+  - “Nível do bloqueio”
+  - 1 parágrafo terapêutico específico para a área predominante (textos abaixo)
+  - Uma lista de 3 sinais comuns (textos abaixo)
+  - “Recomendação de próximo passo” (textos abaixo)
+  - Botão CTA “Quero meu realinhamento energético” que abre WhatsApp com mensagem pronta
+- Deve haver botão “Refazer diagnóstico”.
+
+REGRAS IMPORTANTES DE TOM
+- Português do Brasil, humano, acolhedor e premium.
+- Sem promessas absolutas (ex.: “garantido”, “cura certa”). Use linguagem responsável: “tende”, “pode”, “é comum”.
+- Visual minimalista elegante (fundo claro, card central, tipografia legível, responsivo mobile).
+
+MAPA: ÁREA -> CHAKRA
+- Prosperidade -> Plexo Solar
+- Relacionamentos -> Cardíaco
+- Espiritual -> Frontal + Coronário
+- Energia Vital -> Básico + Umbilical
+
+NÍVEL DO BLOQUEIO (com base na PONTUAÇÃO da área predominante)
+- 0 a 4 pontos = Leve
+- 5 a 8 pontos = Moderado
+- 9 a 12 pontos = Profundo
+
+WHATSAPP
+- Use exatamente este número:
+WHATSAPP_NUMBER = "5581986831679"
+- O botão deve abrir:
+  https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(MENSAGEM)}
+- Mensagem do WhatsApp deve incluir:
+  - saudação
+  - o resultado (área, chakra, nível)
+  - pedido para agendar o realinhamento
+- Use esta mensagem base (ajuste bonito e humano, mantendo as informações):
+"Oi, Leide! Fiz o Diagnóstico Multidimensional e meu resultado foi: {AREA} | Chakra: {CHAKRA} | Nível: {NIVEL}. Quero agendar meu realinhamento energético com você. Você pode me explicar como funciona e quais horários você tem?"
+
+PERGUNTAS (6) + ALTERNATIVAS + PONTUAÇÃO
+(Em cada alternativa, some os pontos indicados.)
+
+Q1) Qual área da sua vida mais parece “travada” agora?
+A) Dinheiro e trabalho (P+2)
+B) Amor e relações (R+2)
+C) Minha fé/propósito e direção (E+2)
+D) Cansaço e falta de energia (V+2)
+
+Q2) O que você percebe repetindo com mais frequência?
+A) Muito esforço e pouco retorno (P+2)
+B) Relações que drenam ou não vão pra frente (R+2)
+C) Confusão mental/desconexão espiritual (E+2)
+D) Procrastinação, corpo pesado, sem ânimo (V+2)
+
+Q3) Quando você pensa em prosperar, qual sensação aparece primeiro?
+A) “Parece que tem um teto/limite invisível” (P+2)
+B) “Se eu prosperar vou me afastar de alguém / ser julgado(a)” (R+1, P+1)
+C) “Eu não sei qual caminho seguir, fico travado(a)” (E+1, P+1)
+D) “Eu até quero, mas não tenho energia” (V+1, P+1)
+
+Q4) Sobre seus relacionamentos, o que mais te descreve?
+A) Me entrego muito e recebo pouco (R+2)
+B) Sempre atraio o mesmo tipo de pessoa/situação (R+2)
+C) Tenho dificuldade de confiar/abrir o coração (R+2)
+D) Prefiro me isolar porque me sinto drenado(a) (V+1, R+1)
+
+Q5) Sua energia nos ambientes:
+A) Em alguns lugares eu “murcha” na hora (V+2)
+B) Sinto que pego emoções/pesos que não são meus (E+1, V+1)
+C) Depois de certas pessoas, fico esgotado(a) (V+2)
+D) Em geral estou bem, mas não avanço como queria (P+1, E+1)
+
+Q6) Quando você tenta mudar de fase, o que acontece?
+A) Algo sempre dá errado no fim (P+2)
+B) Surge insegurança afetiva/medo de perder alguém (R+2)
+C) Fico sem clareza, como se a mente embaralhasse (E+2)
+D) Perco ritmo, desanimo e abandono (V+2)
+
+DESEMPATE
+- Se houver empate entre áreas, usar esta prioridade:
+  1) Prosperidade
+  2) Relacionamentos
+  3) Espiritual
+  4) Energia Vital
+
+TEXTOS DO RESULTADO (1 parágrafo por área)
+1) PROSPERIDADE:
+"Seu campo mostra um padrão de contração ligado a merecimento, segurança material e direção. É comum que isso apareça como esforço alto com retorno instável, medo de faltar ou sensação de ‘teto invisível’. Quando o plexo solar está sob pressão, a sua força de decisão e materialização pode oscilar — e aí a vida trava justamente onde você quer avançar."
+
+2) RELACIONAMENTOS:
+"Seu diagnóstico aponta para um tema de trocas afetivas e vínculos: às vezes você entrega demais, se protege demais, ou repete ciclos que cansam o coração. Quando o cardíaco guarda memórias emocionais antigas, a vida amorosa e as conexões podem ficar no modo ‘defesa’, atraindo relações desequilibradas ou impedindo uma abertura segura."
+
+3) ESPIRITUAL:
+"Seu campo indica necessidade de alinhamento de propósito e limpeza de ruído mental/energético. Isso costuma aparecer como confusão, sensação de desconexão, perda de clareza e dúvidas constantes — mesmo quando ‘está tudo certo’. Quando frontal e coronário pedem reorganização, a intuição fica abafada e a missão parece distante."
+
+4) ENERGIA VITAL:
+"Seu diagnóstico mostra queda de força vital e possível dispersão energética. É comum sentir cansaço sem motivo, procrastinação, corpo pesado ou falta de ânimo para sustentar mudanças. Quando básico e umbilical estão sobrecarregados, o ‘motor’ da vida enfraquece — e tudo vira mais difícil do que deveria."
+
+SINAIS COMUNS (3 bullets por área)
+- Prosperidade:
+  • esforço alto com retorno instável
+  • medo de faltar / insegurança financeira
+  • dificuldade em manter constância e decisões
+- Relacionamentos:
+  • repetição de padrões afetivos
+  • sensação de troca desigual
+  • dificuldade de confiar e relaxar no amor
+- Espiritual:
+  • confusão mental e dúvidas constantes
+  • sensação de desconexão e falta de direção
+  • intuição abafada / dificuldade de ouvir “sinais”
+- Energia Vital:
+  • cansaço frequente e corpo pesado
+  • procrastinação e desânimo
+  • sensibilidade a ambientes e pessoas
+
+RECOMENDAÇÃO DE PRÓXIMO PASSO (1 frase por área)
+- Prosperidade: "Próximo passo: realinhamento do plexo solar + limpeza multidimensional focada em merecimento e materialização."
+- Relacionamentos: "Próximo passo: liberação de vínculos e harmonização do cardíaco para restaurar trocas afetivas equilibradas."
+- Espiritual: "Próximo passo: reorganização do frontal/coronário e reconexão com direção interna (clareza de propósito)."
+- Energia Vital: "Próximo passo: fortalecimento do básico/umbilical e selamento do campo para recuperar energia e constância."
+
+REQUISITOS DE IMPLEMENTAÇÃO
+- index.html:
+  - título, breve introdução, formulário com 6 perguntas (cards/fieldset)
+  - botão “Ver meu diagnóstico”
+  - área/section para resultado (inicialmente escondida)
+- app.js:
+  - armazenar respostas, calcular pontos por área
+  - aplicar desempate conforme regra
+  - determinar nível do bloqueio pela pontuação da área vencedora
+  - preencher dinamicamente resultado, chakra, nível, texto, sinais, recomendação
+  - montar link do WhatsApp com mensagem pronta (incluindo {AREA}, {CHAKRA}, {NIVEL})
+  - botão “Refazer” que limpa e volta ao topo
+- style.css:
+  - layout central em card, responsivo, boa hierarquia tipográfica
+  - botões com hover
+  - sem bibliotecas externas
+
+EXTRAS (faça se for simples)
+- Mostrar barra de progresso (1/6 até 6/6) conforme o usuário responde.
+- Desabilitar botão final até todas as 6 perguntas estarem respondidas.
+
+No final, escreva um pequeno “README” dentro de um comentário no topo do index.html explicando:
+1) que o WhatsApp já está configurado para 5581986831679
+2) como abrir o arquivo localmente (duplo clique) e testar.
+
+Gere os 3 arquivos completos agora.
+```
+
+Se o Codex te devolver os arquivos e você quiser que isso fique **com cara de “página premium” (mais chique, mais alto ticket)**, me manda o resultado que ele gerar e eu te passo **um prompt de refinamento** pra elevar o layout e a copy sem você mexer em nada.
