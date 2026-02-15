@@ -1,0 +1,60 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+  const form = document.querySelector("form");
+  const resultado = document.getElementById("resultado");
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let pontos = 0;
+
+    const respostas = document.querySelectorAll("input[type=radio]:checked");
+
+    respostas.forEach(r => {
+      pontos += parseInt(r.value);
+    });
+
+    let nivel = "";
+    let chakra = "";
+    let mensagem = "";
+
+    if(pontos <= 8){
+      nivel = "Fluxo aberto";
+      chakra = "Campo de merecimento ativo";
+      mensagem = "Seu campo energético está receptivo à prosperidade. Existe alinhamento entre dar e receber.";
+    }
+
+    else if(pontos <= 15){
+      nivel = "Bloqueio leve";
+      chakra = "Chakra básico";
+      mensagem = "Existe um medo inconsciente ligado à segurança material e estabilidade financeira.";
+    }
+
+    else if(pontos <= 22){
+      nivel = "Bloqueio moderado";
+      chakra = "Chakra do plexo solar";
+      mensagem = "Há instabilidade no fluxo do receber e dificuldade em sustentar ganhos.";
+    }
+
+    else{
+      nivel = "Bloqueio profundo";
+      chakra = "Chakra cardíaco e plexo solar";
+      mensagem = "Padrões de auto-sabotagem e memórias energéticas limitantes estão interferindo diretamente na prosperidade.";
+    }
+
+    resultado.innerHTML = `
+      <h2>${nivel}</h2>
+      <p><strong>Chakra associado:</strong> ${chakra}</p>
+      <p>${mensagem}</p>
+
+      <div class="cta">
+        <a href="https://wa.me/5581986831679?text=Eu fiz o diagnóstico e quero receber meu protocolo de prosperidade"
+        target="_blank">
+        Receber meu protocolo no WhatsApp
+        </a>
+      </div>
+    `;
+
+  });
+
+});
