@@ -1,0 +1,32 @@
+:root{
+  --bg1:#0b2b33;
+  --bg2:#0c4a57;
+  --bg3:#0f7f89;
+
+  --card:rgba(255,255,255,.10);
+  --stroke:rgba(255,255,255,.12);
+  --text:#eaf6f7;
+
+  --aqua:#13e0d0;
+  --aqua2:#0fbdb1;
+
+  --gold:#d7b46a;
+}
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at top, rgba(255,215,120,.15), transparent 40%),
+    linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+}
+
+.caixa{
+  background:var(--card);
+  border:1px solid var(--stroke);
+  border-radius:20px;
+  padding:40px;
+  backdrop-filter:blur(14px);
+  box-shadow:0 0 30px rgba(0,0,0,.3);
+}
