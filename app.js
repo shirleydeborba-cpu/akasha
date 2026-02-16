@@ -1,70 +1,126 @@
-document.getElementById("quizForm").addEventListener("submit", function(e){
+document.addEventListener("DOMContentLoaded", () => {
 
-e.preventDefault();
+  const form = document.querySelector("form");
+  const resultado = document.getElementById("resultado");
 
-let nome = document.getElementById("nome").value;
-let respostas = document.querySelectorAll("input[type=radio]:checked");
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-if(respostas.length < 6){
-alert("Responda todas as perguntas");
-return;
-}
+    let pontos = 0;
 
-let pontos = 0;
+    const respostas = document.querySelectorAll("input[type=radio]:checked");
 
-respostas.forEach(r => pontos += parseInt(r.value));
+    respostas.forEach(r => {
+      pontos += parseInt(r.value);
+    });
 
-let nivel = "";
-let chakra = "";
-let mensagem = "";
-let plano = "";
-let afirmacao = "";
+    let nivel = "";
+    let chakra = "";
+    let mensagem = "";
+    let plano = [];
+    let afirmacao = "";
 
-if(pontos <= 10){
-nivel = "Fluxo aberto";
-chakra = "Chakra do Plexo Solar alinhado";
-mensagem = "Seu campo está pronto para expandir a prosperidade.";
-plano = "Ativar frequência da abundância | Sustentar merecimento | Expandir recepção.";
-afirmacao = "Eu permito que a prosperidade flua com leveza.";
-}
+    // 🔮 CLASSIFICAÇÃO ENERGÉTICA
 
-else if(pontos <= 18){
-nivel = "Bloqueio leve";
-chakra = "Oscilação no chakra do merecimento";
-mensagem = "Existe potencial de crescimento com pequenos ajustes.";
-plano = "Limpeza energética | Reprogramação de crenças | Alinhamento do receber.";
-afirmacao = "Eu sou digna de prosperar.";
-}
+    if (pontos <= 8) {
 
-else{
-nivel = "Bloqueio profundo";
-chakra = "Contração no campo financeiro";
-mensagem = "Seu campo pede liberação de padrões antigos.";
-plano = "Remoção de votos | Cura da linhagem | Reconexão com a frequência da abundância.";
-afirmacao = "Eu autorizo minha expansão financeira.";
-}
+      nivel = "Fluxo aberto para prosperidade";
+      chakra = "Chakra do Plexo Solar alinhado";
 
-document.getElementById("resultado").innerHTML = `
+      mensagem = "Seu campo está receptivo para expansão financeira. Existe força de merecimento ativa e conexão saudável com o receber.";
 
-<h2>${nome ? nome + ", seu resultado:" : "Seu resultado:"}</h2>
+      plano = [
+        "Ativar o chakra do plexo solar com respiração de poder por 3 minutos ao dia.",
+        "Praticar o receber consciente (aceitar elogios, presentes e oportunidades).",
+        "Visualizar diariamente sua vida com estabilidade financeira."
+      ];
 
-<h3>${nivel}</h3>
+      afirmacao = "Eu permito que a prosperidade flua até mim com leveza e merecimento.";
 
-<p><strong>Chakra:</strong> ${chakra}</p>
+    }
 
-<p>${mensagem}</p>
+    else if (pontos <= 16) {
 
-<h4>Plano prático:</h4>
-<p>${plano}</p>
+      nivel = "Oscilações no fluxo financeiro";
+      chakra = "Chakra Cardíaco em ajuste";
 
-<h4>Afirmação:</h4>
-<p>${afirmacao}</p>
+      mensagem = "Existe potencial de crescimento, mas ainda há memórias emocionais afetando sua segurança financeira.";
 
-<a class="btn" target="_blank"
-href="https://wa.me/5581986831679?text=Olá%20Leide,%20fiz%20meu%20diagnóstico%20e%20quero%20meu%20protocolo">
-Receber meu protocolo completo no WhatsApp
-</a>
+      plano = [
+        "Praticar coerência cardíaca por 5 minutos ao dia.",
+        "Liberar crenças de escassez através da escrita terapêutica.",
+        "Criar um pequeno movimento financeiro novo nesta semana."
+      ];
 
-`;
+      afirmacao = "Meu coração se abre para uma nova realidade de prosperidade.";
 
-});
+    }
+
+    else if (pontos <= 24) {
+
+      nivel = "Bloqueios energéticos moderados";
+      chakra = "Chakra Básico desalinhado";
+
+      mensagem = "Seu campo mostra padrões de sobrevivência e medo da estabilidade financeira.";
+
+      plano = [
+        "Fortalecer o chakra básico com conexão com a natureza.",
+        "Organizar sua vida financeira física (contas, valores e metas).",
+        "Cortar laços energéticos com padrões de escassez familiar."
+      ];
+
+      afirmacao = "Eu me sinto segura para prosperar e expandir.";
+
+    }
+
+    else {
+
+      nivel = "Bloqueio profundo no fluxo da prosperidade";
+      chakra = "Campo de merecimento comprometido";
+
+      mensagem = "Há travas energéticas relacionadas a medo, crenças antigas e padrões de não merecimento.";
+
+      plano = [
+        "Iniciar um processo de limpeza energética e emocional.",
+        "Trabalhar o merecimento diariamente diante do espelho.",
+        "Evitar ambientes e pessoas que reforcem a escassez."
+      ];
+
+      afirmacao = "Eu libero agora todas as memórias que me impedem de prosperar.";
+
+    }
+
+    // 🧾 EXIBIR RESULTADO
+
+    resultado.style.display = "block";
+
+    document.getElementById("resNivel").innerText = nivel;
+    document.getElementById("resChakra").innerText = chakra;
+    document.getElementById("resMensagem").innerText = mensagem;
+
+    const resPlano = document.getElementById("resPlano");
+    resPlano.innerHTML = "";
+
+    plano.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      resPlano.appendChild(li);
+    });
+
+    document.getElementById("resAfirmacao").innerText = afirmacao;
+
+    // 📲 WHATSAPP
+
+    const nome = document.getElementById("nome").value || "Pessoa";
+
+    const textoWhats = `Olá Leide ✨
+
+Acabei de fazer meu Diagnóstico da Prosperidade e meu resultado foi:
+
+🔮 Nível: ${nivel}
+🧭 Chakra: ${chakra}
+
+Quero receber o protocolo completo e entender meu desbloqueio energético. 💰`;
+
+    const link = "https://wa.me/5581986831679?text=" + encodeURIComponent(textoWhats);
+
