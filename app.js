@@ -11,6 +11,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let pontos = 0;
     respostas.forEach((r) => (pontos += parseInt(r.value, 10) || 0));
+// =====================
+// BARRA ENERGÉTICA (%)
+// =====================
+const minPontos = 6;   // 6 perguntas, mínimo 1 cada
+const maxPontos = 30;  // 6 perguntas, máximo 5 cada
+
+let pct = Math.round(((pontos - minPontos) / (maxPontos - minPontos)) * 100);
+pct = Math.max(0, Math.min(100, pct));
+
+let tituloBarra = "Campo em calibração";
+let subtituloBarra = "Seu fluxo está ajustando rotas internas.";
+let classeBarra = "medio";
+
+if (pct <= 33) {
+  tituloBarra = "Campo em recalibração";
+  subtituloBarra = "Há sinais de contenção no receber. A energia pede segurança e base.";
+  classeBarra = "baixo";
+} else if (pct <= 66) {
+  tituloBarra = "Campo em abertura";
+  subtituloBarra = "Você já tem luz no fluxo, mas ainda existem travas pontuais no merecimento.";
+  classeBarra = "medio";
+} else {
+  tituloBarra = "Campo bem responsivo";
+  subtituloBarra = "Seu fluxo está mais disponível. Agora é alinhar ação + direção para estabilizar.";
+  classeBarra = "alto";
+}
 
     let nivel = "";
     let chakra = "";
