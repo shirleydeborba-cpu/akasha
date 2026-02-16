@@ -75,6 +75,48 @@ if (pct <= 33) {
       ];
       afirmacao = "Eu estou segura. Eu mereço prosperar. Eu sustento abundância com paz.";
     }
+// =====================
+// BARRA ENERGÉTICA (%)
+// =====================
+const minPontos = 6;
+const maxPontos = 30;
+
+let pct = Math.round(((pontos - minPontos) / (maxPontos - minPontos)) * 100);
+pct = Math.max(0, Math.min(100, pct));
+
+const elPct = document.getElementById("resPct");
+const elBarra = document.getElementById("resBarra");
+const elEnergiaTitulo = document.getElementById("resEnergiaTitulo");
+const elEnergiaSub = document.getElementById("resEnergiaSub");
+
+if (elPct) elPct.textContent = pct + "%";
+if (elBarra) elBarra.style.width = pct + "%";
+
+let tituloEnergia = "";
+let subEnergia = "";
+let classeEnergia = "";
+
+if (pct <= 33) {
+  tituloEnergia = "Campo em recalibração";
+  subEnergia = "Seu fluxo está pedindo segurança energética para expandir.";
+  classeEnergia = "baixo";
+} else if (pct <= 66) {
+  tituloEnergia = "Campo em abertura";
+  subEnergia = "Existe potencial ativo, apenas ajustes de merecimento.";
+  classeEnergia = "medio";
+} else {
+  tituloEnergia = "Campo bem responsivo";
+  subEnergia = "Energia favorável para crescimento e materialização.";
+  classeEnergia = "alto";
+}
+
+if (elBarra) {
+  elBarra.classList.remove("baixo", "medio", "alto");
+  elBarra.classList.add(classeEnergia);
+}
+
+if (elEnergiaTitulo) elEnergiaTitulo.textContent = tituloEnergia;
+if (elEnergiaSub) elEnergiaSub.textContent = subEnergia;
 
     // Mostrar resultado (IDs precisam existir no seu HTML)
     if (resultado) resultado.style.display = "block";
