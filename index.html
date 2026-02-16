@@ -1,126 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diagnóstico da Prosperidade</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnóstico da Prosperidade</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <main class="container">
 
-<div class="topo">
-<p class="marca">VIVENDO O DESPERTAR</p>
-<h1>Diagnóstico da Prosperidade</h1>
-<p class="sub">
-Responda com sinceridade. No fim, você recebe um mapa do seu campo financeiro,
-o chakra associado e um direcionamento prático.
-</p>
-</div>
+  <div class="topo">
+    <p class="marca">VIVENDO O DESPERTAR</p>
+    <h1>Diagnóstico da Prosperidade</h1>
+    <p class="sub">
+      Responda com sinceridade. No fim, você recebe um mapa do seu campo financeiro,
+      o chakra associado e um direcionamento prático.
+    </p>
+  </div>
 
-<form id="quizForm">
+  <form>
 
-<div class="pergunta">
-<label>Seu nome (opcional)</label>
-<input type="text" id="nome" placeholder="Ex: Maria">
-</div>
+    <label>Seu nome (opcional)</label>
+    <input type="text" id="nome" placeholder="Ex: Maria">
 
-<div class="pergunta">
-<p>1) O dinheiro some rápido da sua vida?</p>
-<label><input type="radio" name="q1" value="1"> Nunca</label>
-<label><input type="radio" name="q1" value="2"> Raramente</label>
-<label><input type="radio" name="q1" value="3"> Às vezes</label>
-<label><input type="radio" name="q1" value="4"> Quase sempre</label>
-<label><input type="radio" name="q1" value="5"> Sempre</label>
-</div>
+    <!-- PERGUNTA 1 -->
+    <div class="pergunta">
+      <p>1) O dinheiro some rápido da sua vida?</p>
+      <label><input type="radio" name="q1" value="1">Nunca</label>
+      <label><input type="radio" name="q1" value="2">Raramente</label>
+      <label><input type="radio" name="q1" value="3">Às vezes</label>
+      <label><input type="radio" name="q1" value="4">Quase sempre</label>
+      <label><input type="radio" name="q1" value="5">Sempre</label>
+    </div>
 
-<div class="pergunta">
-<p>2) Você se sente confortável em receber/cobrar?</p>
-<label><input type="radio" name="q2" value="1"> Sim</label>
-<label><input type="radio" name="q2" value="2"> Quase sempre</label>
-<label><input type="radio" name="q2" value="3"> Às vezes</label>
-<label><input type="radio" name="q2" value="4"> Raramente</label>
-<label><input type="radio" name="q2" value="5"> Não</label>
-</div>
+    <!-- PERGUNTA 2 -->
+    <div class="pergunta">
+      <p>2) Você se sente confortável em receber/cobrar?</p>
+      <label><input type="radio" name="q2" value="5">Sim</label>
+      <label><input type="radio" name="q2" value="4">Quase sempre</label>
+      <label><input type="radio" name="q2" value="3">Às vezes</label>
+      <label><input type="radio" name="q2" value="2">Raramente</label>
+      <label><input type="radio" name="q2" value="1">Não</label>
+    </div>
 
-<div class="pergunta">
-<p>3) Sua vida financeira é instável?</p>
-<label><input type="radio" name="q3" value="1"> Nunca</label>
-<label><input type="radio" name="q3" value="2"> Raramente</label>
-<label><input type="radio" name="q3" value="3"> Às vezes</label>
-<label><input type="radio" name="q3" value="4"> Quase sempre</label>
-<label><input type="radio" name="q3" value="5"> Sempre</label>
-</div>
+    <!-- PERGUNTA 3 -->
+    <div class="pergunta">
+      <p>3) Sua vida financeira é instável?</p>
+      <label><input type="radio" name="q3" value="1">Nunca</label>
+      <label><input type="radio" name="q3" value="2">Raramente</label>
+      <label><input type="radio" name="q3" value="3">Às vezes</label>
+      <label><input type="radio" name="q3" value="4">Quase sempre</label>
+      <label><input type="radio" name="q3" value="5">Sempre</label>
+    </div>
 
-<div class="pergunta">
-<p>4) Você sente bloqueio para prosperar?</p>
-<label><input type="radio" name="q4" value="1"> Não</label>
-<label><input type="radio" name="q4" value="2"> Pouco</label>
-<label><input type="radio" name="q4" value="3"> Médio</label>
-<label><input type="radio" name="q4" value="4"> Forte</label>
-<label><input type="radio" name="q4" value="5"> Muito forte</label>
-</div>
+    <!-- PERGUNTA 4 -->
+    <div class="pergunta">
+      <p>4) Você sente bloqueio para prosperar?</p>
+      <label><input type="radio" name="q4" value="1">Não</label>
+      <label><input type="radio" name="q4" value="2">Pouco</label>
+      <label><input type="radio" name="q4" value="3">Médio</label>
+      <label><input type="radio" name="q4" value="4">Forte</label>
+      <label><input type="radio" name="q4" value="5">Muito forte</label>
+    </div>
 
-<div class="pergunta">
-<p>5) Você vive no modo sobrevivência?</p>
-<label><input type="radio" name="q5" value="1"> Nunca</label>
-<label><input type="radio" name="q5" value="2"> Raramente</label>
-<label><input type="radio" name="q5" value="3"> Às vezes</label>
-<label><input type="radio" name="q5" value="4"> Quase sempre</label>
-<label><input type="radio" name="q5" value="5"> Sempre</label>
-</div>
+    <!-- PERGUNTA 5 -->
+    <div class="pergunta">
+      <p>5) Você vive no modo sobrevivência?</p>
+      <label><input type="radio" name="q5" value="1">Nunca</label>
+      <label><input type="radio" name="q5" value="2">Raramente</label>
+      <label><input type="radio" name="q5" value="3">Às vezes</label>
+      <label><input type="radio" name="q5" value="4">Quase sempre</label>
+      <label><input type="radio" name="q5" value="5">Sempre</label>
+    </div>
 
-<div class="pergunta">
-<p>6) Você se sente segura(o) para crescer financeiramente?</p>
-<label><input type="radio" name="q6" value="1"> Sim</label>
-<label><input type="radio" name="q6" value="2"> Quase sempre</label>
-<label><input type="radio" name="q6" value="3"> Às vezes</label>
-<label><input type="radio" name="q6" value="4"> Raramente</label>
-<label><input type="radio" name="q6" value="5"> Não</label>
-</div>
+    <!-- PERGUNTA 6 -->
+    <div class="pergunta">
+      <p>6) Você se sente segura(o) para crescer financeiramente?</p>
+      <label><input type="radio" name="q6" value="5">Sim</label>
+      <label><input type="radio" name="q6" value="4">Quase sempre</label>
+      <label><input type="radio" name="q6" value="3">Às vezes</label>
+      <label><input type="radio" name="q6" value="2">Raramente</label>
+      <label><input type="radio" name="q6" value="1">Não</label>
+    </div>
 
-<button type="submit" class="btn">Ver meu diagnóstico</button>
+    <button type="submit" class="btn">Ver meu diagnóstico</button>
 
-</form>
+  </form>
 
-<section id="resultado" class="resultado" style="display:none;">
-  <div class="result-box">
+  <!-- RESULTADO -->
+  <section id="resultado" class="resultado" style="display:none;">
+
     <h2>Seu diagnóstico</h2>
 
     <p><strong>Nível:</strong> <span id="resNivel"></span></p>
     <p><strong>Chakra:</strong> <span id="resChakra"></span></p>
 
+    <!-- BARRA ENERGÉTICA -->
+    <div class="result-box highlight">
+      <h3>Leitura do campo energético</h3>
+
+      <div class="energia-header">
+        <strong id="resEnergiaTitulo"></strong>
+        <span id="resPct"></span>
+      </div>
+
+      <div class="barra-energia">
+        <div id="resBarra"></div>
+      </div>
+
+      <p id="resEnergiaSub"></p>
+    </div>
+
     <div class="result-box">
       <h3>Leitura energética</h3>
       <p id="resMensagem"></p>
     </div>
-<div class="result-box">
-  <h3>Leitura energética</h3>
-  <p id="resMensagem"></p>
-</div>
-
-<!-- 🔥 BARRA ENERGÉTICA -->
-<div class="result-box">
-  <h3>Nível energético do fluxo</h3>
-
-  <div class="energy-head">
-    <span>Seu campo hoje</span>
-    <span id="resPct">0%</span>
-  </div>
-
-  <div class="energy-bar">
-    <div id="resBarra" class="energy-fill"></div>
-  </div>
-
-  <div class="energy-text">
-    <div id="resEnergiaTitulo"></div>
-    <div id="resEnergiaSub"></div>
-  </div>
-</div>
 
     <div class="result-box">
       <h3>Plano prático (3 passos)</h3>
@@ -133,13 +129,12 @@ o chakra associado e um direcionamento prático.
     </div>
 
     <div class="actions">
-      <a id="btnWhats" class="btn-whats" href="#" target="_blank" rel="noopener">
-        Receber meu protocolo completo no WhatsApp
+      <a id="btnWhats" class="btn-whats" target="_blank">
+        Receber protocolo completo no WhatsApp
       </a>
     </div>
-  </div>
-</section>
 
+  </section>
 
 </main>
 
