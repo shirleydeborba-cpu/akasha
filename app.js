@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     const respostas = document.querySelectorAll('input[type="radio"]:checked');
-    let pontos = 0;
 
+    let pontos = 0;
     respostas.forEach(r => pontos += parseInt(r.value));
 
     let nivel = "";
@@ -17,41 +17,47 @@ document.addEventListener("DOMContentLoaded", () => {
     let plano = [];
     let afirmacao = "";
 
+    // 🔮 CLASSIFICAÇÃO
+
     if (pontos <= 8) {
       nivel = "Fluxo aberto";
       chakra = "Campo de merecimento ativo";
       mensagem = "Seu campo está receptivo para prosperar.";
       plano = [
-        "Manter práticas de gratidão diária",
-        "Expandir sua visão de ganhos",
-        "Ajudar outras pessoas a prosperar"
+        "Manter frequência de gratidão",
+        "Fortalecer sua energia de ação",
+        "Expandir sua visão de ganhos"
       ];
-      afirmacao = "Eu permito que a prosperidade flua com alegria.";
+      afirmacao = "Eu permito que o dinheiro flua com leveza.";
     }
 
     else if (pontos <= 16) {
-      nivel = "Oscilante";
-      chakra = "Chakra do plexo solar";
-      mensagem = "Existem crenças limitantes ativas.";
+      nivel = "Oscilação energética";
+      chakra = "Plexo solar";
+      mensagem = "Há potencial, mas existem medos e dúvidas.";
       plano = [
-        "Trabalhar o merecimento",
-        "Organizar sua vida financeira",
-        "Ativar sua autoconfiança"
+        "Trabalhar autoconfiança",
+        "Organizar vida financeira",
+        "Ativar energia do merecimento"
       ];
-      afirmacao = "Eu sou capaz de gerar riqueza.";
+      afirmacao = "Eu sou capaz de prosperar com segurança.";
     }
 
     else {
-      nivel = "Bloqueado";
-      chakra = "Chakra raiz";
-      mensagem = "Seu campo pede segurança energética.";
+      nivel = "Bloqueio energético";
+      chakra = "Chakra básico";
+      mensagem = "Seu campo mostra travas ligadas à segurança e sobrevivência.";
       plano = [
-        "Fortalecer sua base emocional",
-        "Limpeza energética",
-        "Conexão com o corpo físico"
+        "Limpeza energética profunda",
+        "Reprogramação de crenças",
+        "Ativação do chakra raiz"
       ];
       afirmacao = "Eu me sinto segura para prosperar.";
     }
+
+    // 🖥 MOSTRAR RESULTADO
+
+    resultado.style.display = "block";
 
     document.getElementById("resNivel").innerText = nivel;
     document.getElementById("resChakra").innerText = chakra;
@@ -67,18 +73,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("resAfirmacao").innerText = afirmacao;
 
-    resultado.style.display = "block";
+    // 📲 WHATSAPP
 
-    // WHATSAPP
-
-    const nome = document.getElementById("nome")?.value || "Pessoa";
+    const nome = (document.getElementById("nome").value || "Pessoa").trim();
 
     const textoWhats = `Olá Leide ✨
 
 Acabei de fazer meu Diagnóstico da Prosperidade.
 
-🔮 Nível: ${nivel}
-🧭 Chakra: ${chakra}
+Nível: ${nivel}
+Chakra: ${chakra}
 
 Quero receber o protocolo completo 💰`;
 
@@ -90,4 +94,3 @@ Quero receber o protocolo completo 💰`;
 
 });
 
-<script src="app.js"></script>
